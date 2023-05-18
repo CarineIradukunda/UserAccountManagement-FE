@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
-import { LoginServiceService } from '../services/login-service.service';
+import { LoginServiceService } from '../../../services/login-service.service';
 import { Router } from '@angular/router';
-import { SignupServiceService } from '../services/signup-service.service';
+import { SignupServiceService } from '../../../services/signup-service.service';
 
 @Component({
   selector: 'app-signup',

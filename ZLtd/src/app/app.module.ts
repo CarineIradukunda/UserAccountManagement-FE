@@ -25,8 +25,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatNativeDateModule } from '@angular/material/core';
 // import { UserService } from './user.service';
 import { HttpClient } from '@angular/common/http';
-import { LoginServiceService } from './services/login-service.service';
-import { SignupServiceService } from './services/signup-service.service';
+import { LoginServiceService } from '../../services/login-service.service';
+import { SignupServiceService } from '../../services/signup-service.service';
 
 
 
