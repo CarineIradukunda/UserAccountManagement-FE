@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
-import { LoginModalComponent } from './login-modal/login-modal.component';
-import { SignupModalComponent } from './signup-modal/signup-modal.component';
+import { LoginModalComponent } from './login/login.component';
+import { SignupModalComponent } from './signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
@@ -23,8 +23,10 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatNativeDateModule } from '@angular/material/core';
-import { UserService } from './user.service';
+// import { UserService } from './user.service';
 import { HttpClient } from '@angular/common/http';
+import { LoginServiceService } from './services/login-service.service';
+import { SignupServiceService } from './services/signup-service.service';
 
 
 
@@ -40,14 +42,14 @@ import { HttpClient } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule,
     MatButtonModule,
-    MatMenuModule,
+    MatMenuModule ,
     MatDatepickerModule,
     MatIconModule,
-    MatInputModule,
-    MatTooltipModule,
-    MatToolbarModule,
-    MatRadioModule,
-    BrowserAnimationsModule,
+    MatInputModule ,
+   MatTooltipModule,
+   MatToolbarModule,
+   MatRadioModule,
+   BrowserAnimationsModule,
     MatCardModule,
     FormsModule,
     ReactiveFormsModule,
@@ -58,7 +60,7 @@ import { HttpClient } from '@angular/common/http';
     MatDialogModule,
     MatNativeDateModule
   ],
-  providers: [HttpClientModule, UserService, MatDatepickerModule],
+  providers: [HttpClientModule, LoginServiceService,SignupServiceService, MatDatepickerModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

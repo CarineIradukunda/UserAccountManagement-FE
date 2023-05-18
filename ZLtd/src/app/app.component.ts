@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { UserClass } from './UserClass';
 import { FormBuilder, Validators } from '@angular/forms';
-import { UserService } from './user.service';
+
 import { Observable, of } from 'rxjs';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { SignupModalComponent } from './signup-modal/signup-modal.component';
-import { LoginModalComponent } from './login-modal/login-modal.component';
+import { SignupModalComponent } from './signup/signup.component';
+import { LoginModalComponent } from './login/login.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +21,7 @@ export class AppComponent {
   message = null;
 
 
-  constructor(private formbulider: FormBuilder, public userservice: UserService, public matDialog: MatDialog) { }
+  constructor(private formbulider: FormBuilder, public matDialog: MatDialog) { }
   // ngOnInit(): void {
   //   throw new Error('Method not implemented.');
   // }
@@ -51,4 +52,6 @@ export class AppComponent {
 
 
   }
+
+  
 }
