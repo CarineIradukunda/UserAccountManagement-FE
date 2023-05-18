@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
-import { LoginServiceService } from '../../../services/login-service.service';
+import { LoginServiceService } from '../services/login-service.service';
 import { Router } from '@angular/router';
 import { SignupModalComponent } from '../signup/signup.component';
 import { map, catchError, throwError, Observable } from 'rxjs';
@@ -36,11 +36,11 @@ export class LoginModalComponent {
   get password() { return this.userForm.get('password'); }
 
   onFormSubmit() {
-    console.log(this.userForm.value);
+    // console.log(this.userForm.value);
     const nid = this.userForm.value.nid;
     const password = this.userForm.value.password;
 
-    if (nid === '') {
+    if (nid === null) {
       this.message = 'NID or Passport is required!';
       console.log('NID or Passport is empty');
       return; 
@@ -48,21 +48,21 @@ export class LoginModalComponent {
 
     if (password === '') {
       this.message = 'Password is required!';
-      console.log('Password is empty');
+     // console.log('Password is empty');
       return; 
     }
 
     this.loginservice.loginUser(this.userForm.value).subscribe(
       (res: any) => {
         // Successful login
-        console.error('Login Success');
+       // console.error('Login Success');
         this.router.navigateByUrl('/user');
         this.userForm.reset();
       },
       (error) => {
         // Failed login
         this.message = 'Login failed!';
-        console.error('Login failed', error);
+       // console.error('Login failed', error);
         
       }
     );

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { map, catchError, throwError, Observable, tap } from 'rxjs';
-import { UserClass } from '../src/app/UserClass';
+import { UserClass } from '../UserClass';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 
