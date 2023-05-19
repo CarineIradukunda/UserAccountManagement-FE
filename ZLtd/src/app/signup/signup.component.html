@@ -68,33 +68,11 @@
 <br>
 
 
-    <!-- <mat-form-field style="width:70%;margin-left:5%">
-        <input matInput type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required formControlName="password" placeholder="Password">
-    <mat-error *ngIf="nid.hasError('required')">Password is required</mat-error>
-    </mat-form-field>
-
-<br>
-
-        <mat-card style="background-color: rgb(216, 216, 216); margin:2%">
-            <mat-card-title style="margin:2%">Password must contain the following:</mat-card-title>
-            <mat-card-content><p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-            <p id="number" class="invalid">A <b>number</b></p>
-            <p id="length" class="invalid">Minimum <b>8 characters</b></p></mat-card-content>
-        </mat-card> -->
-
-    <!-- <p *ngIf="dataSaved" style="color:rgb(0, 128, 0);font-size:20px;font-weight:bold" Class="success">
-        {{message}}
-    </p> -->
-
-   
-
 
     <br><br>
 
 
     <mat-dialog-actions style="width:70%;margin-left:5%">
-<p style="color:rgb(168, 11, 11);font-size:12px;font-weight:bold">{{message}}</p>
                 <button mat-stroked-button color="primary" (click)="onFormSubmit()">Submit</button>
                 <button mat-stroked-button color="accent" (click)="resetForm()">Reset</button>
                 <button mat-stroked-button color="warn" (click)="closeModal()">Close</button>

@@ -86,11 +86,12 @@ export class SignupModalComponent implements OnInit {
         // Successful login
         // console.error('Login Success');
         //this.message = "Success";
-        this.userForm.closeModal
+        this.userForm.closeModal;
       },
       (error) => {
         // Failed login
         this.message = 'Sign Up failed!';
+        this.userForm.closeModal;
         // console.error('Login failed', error);
 
       }
