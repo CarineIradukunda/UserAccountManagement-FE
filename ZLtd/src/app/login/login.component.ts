@@ -40,17 +40,17 @@ export class LoginModalComponent {
     const nid = this.userForm.value.nid;
     const password = this.userForm.value.password;
 
-    if (nid === null) {
-      this.message = 'NID or Passport is required!';
+    if (nid === '' || password === '') {
+      this.message = 'NID and Password are required!';
       console.log('NID or Passport is empty');
       return; 
     }
 
-    if (password === '') {
-      this.message = 'Password is required!';
+    // if (password === '') {
+    //   this.message = 'Password is required!';
      // console.log('Password is empty');
-      return; 
-    }
+    //   return; 
+    // }
 
     this.loginservice.loginUser(this.userForm.value).subscribe(
       (res: any) => {
@@ -69,24 +69,6 @@ export class LoginModalComponent {
   }
 
 
-  onPasswordInput() {
-    if (this.userForm.hasError('passwordMismatch'))
-      this.password.setErrors([{ 'passwordMismatch': true }]);
-    else
-      this.password.setErrors(null);
-  }
-  
-  openSignUpModal() {
-    const dialogConfig = new MatDialogConfig();
-    // The user can't close the dialog by clicking outside its body
-    dialogConfig.disableClose = true;
-    dialogConfig.id = "signup-modal-component";
-    dialogConfig.height = "700px";
-    dialogConfig.width = "600px";
-    // https://material.angular.io/components/dialog/overview
-    const modalDialog = this.matDialog.open(SignupModalComponent, dialogConfig);
 
-
-  }
 
 }

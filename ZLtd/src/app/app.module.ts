@@ -28,6 +28,8 @@ import { HttpClient } from '@angular/common/http';
 import { LoginServiceService } from './services/login-service.service';
 import { SignupServiceService } from './services/signup-service.service';
 import { HomeComponent } from './home/home.component';
+import { BadgeComponent } from './badge/badge.component';
+import { BadgeService } from './services/badge.service';
 
 
 
@@ -37,7 +39,8 @@ import { HomeComponent } from './home/home.component';
     UserComponent,
     LoginModalComponent,
     SignupModalComponent,
-    HomeComponent
+    HomeComponent,
+    BadgeComponent
   ],
   imports: [
     BrowserModule,
@@ -60,9 +63,9 @@ import { HomeComponent } from './home/home.component';
     MatDividerModule,
     MatSidenavModule,
     MatDialogModule,
-    MatNativeDateModule
+    MatNativeDateModule,
   ],
-  providers: [HttpClientModule, LoginServiceService,SignupServiceService, MatDatepickerModule],
+  providers: [HttpClientModule, LoginServiceService,SignupServiceService, MatDatepickerModule,BadgeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
