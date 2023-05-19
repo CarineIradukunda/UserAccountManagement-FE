@@ -1,0 +1,28 @@
+<div >
+    
+    <br><br>
+    <form [formGroup]="userForm" (ngSubmit)="onFormSubmit()" >
+
+        <mat-form-field style="width:100%">
+            <input matInput placeholder="NID or Passport" formControlName="nid" type="text">
+        </mat-form-field>
+        <br><br>
+        <mat-form-field style="width:100%">
+            <!-- <input matInput placeholder="Password" formControlName="password" required type="password"> -->
+            <input matInput type="password" placeholder="Password" formControlName="password"
+           >
+            <mat-error *ngIf="password.hasError('required')">Password is required</mat-error>
+
+        </mat-form-field>
+        <br>
+        <br><br>
+        <p style="color:rgb(168, 11, 11);font-size:15px;font-weight:bold">{{message}}</p>
+        <mat-dialog-actions >
+           
+            <button mat-stroked-button color="primary" (click)="onFormSubmit()">Submit</button>
+            <!-- <button mat-stroked-button color="accent" (click)="resetForm()">Reset</button> -->
+
+        </mat-dialog-actions>
+
+    </form>
+</div>

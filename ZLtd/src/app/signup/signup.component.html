@@ -1,0 +1,85 @@
+
+
+<!-- <mat-dialog-content style="margin-left:20%; width:60%" > -->
+    
+    <h2 mat-dialog-title>Welcome to SoarConnect</h2>
+    <br>
+<form [formGroup]="userForm" (ngSubmit)="onFormSubmit()" style="width:100%">
+    <mat-form-field style="width:90%;margin-left:5%">
+        <input matInput placeholder="Names" formControlName="names">
+    </mat-form-field>
+    <br>
+
+        <mat-form-field appearance="fill" style="width:50%;margin-left:5%">
+            <mat-label style="font-size:15px">Gender</mat-label>
+            <select matNativeControl required formControlName="gender">
+                <option style="font-size:15px" value="FEMALE">FEMALE</option>
+                <option style="font-size:15px" value="MALE">MALE</option>
+        
+            </select>
+        </mat-form-field>
+<br>
+
+    <mat-form-field style="width:70%;margin-left:5%">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput formControlName ="email" 
+        placeholder="Ex. pat@example.com">
+    </mat-form-field>
+    <br>
+    <mat-form-field style="width:20%;margin-left:5%">
+        <input matInput type="number" placeholder="Age" formControlName="age"  min="18" max="80">
+        
+    </mat-form-field>
+    <br>
+    <p style="color:rgb(168, 11, 11);font-size:12px;font-weight:bold;margin-left:5%">{{ageMessage}}</p>
+    <br>
+    <mat-form-field style="width:70%;margin-left:5%">
+        <mat-label>Date Of Birth</mat-label>
+        <input matInput placeholder="" formControlName="dob" placeholder="Ex. 12/05/1985">
+    </mat-form-field>
+    <br>
+    
+    <mat-form-field appearance="fill" style="width:50%;margin-left:5%">
+    <mat-label style="font-size:15px">Marital Status</mat-label>
+        <select matNativeControl required formControlName="maritalStatus">
+            <option style="font-size:15px" value="SINGLE">SINGLE</option>
+            <option style="font-size:15px" value="MARRIED">MARRIED</option>
+            <option style="font-size:15px" value="DIVORCED">DIVORCED</option>
+            <option style="font-size:15px" value="WIDOWED">WIDOWED</option>
+        </select>
+    </mat-form-field>
+<br>
+    <mat-form-field style="width:70%;margin-left:5%">
+        <input matInput placeholder="Nationality" formControlName="nationality">
+    </mat-form-field>
+    <br>
+    <mat-form-field style="width:70%;margin-left:5%">
+       
+        <input type="text" matInput formControlName="nid" placeholder="NID or Passport">
+        <mat-error *ngIf="nid.hasError('required')">NID or Passport is required</mat-error>
+    </mat-form-field>
+    <br>
+
+<mat-form-field style="width:70%;margin-left:5%">
+    <input matInput type="password" placeholder="Password" formControlName="password" (input)="onPasswordInput()">
+    <mat-error *ngIf="password.hasError('required')">Password is required</mat-error>
+    <mat-error *ngIf="password.hasError('minlength')">Password must have at least {{minPw}} characters</mat-error>
+</mat-form-field>
+<br>
+
+
+
+    <br><br>
+
+
+    <mat-dialog-actions style="width:70%;margin-left:5%">
+                <button mat-stroked-button color="primary" (click)="onFormSubmit()">Submit</button>
+                <button mat-stroked-button color="accent" (click)="resetForm()">Reset</button>
+                <button mat-stroked-button color="warn" (click)="closeModal()">Close</button>
+    </mat-dialog-actions>
+
+    
+
+</form>
+<!-- </mat-dialog-content> -->
+
