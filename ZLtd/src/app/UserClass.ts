@@ -7,7 +7,7 @@ export class UserClass {
     public dob!: string;
     public maritalStatus!: string;
     public nationality!: string;
-    public nid !: number;
+    public nid !: string;
     public password !: string;
     public email !: string;
 

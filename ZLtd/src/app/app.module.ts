@@ -27,6 +27,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { HttpClient } from '@angular/common/http';
 import { LoginServiceService } from './services/login-service.service';
 import { SignupServiceService } from './services/signup-service.service';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -35,7 +36,8 @@ import { SignupServiceService } from './services/signup-service.service';
     AppComponent,
     UserComponent,
     LoginModalComponent,
-    SignupModalComponent
+    SignupModalComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
