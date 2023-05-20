@@ -7,4 +7,4 @@ To run it
 
 The application will open on port 4200
 
-link to repo : https://github.com/CarineIradukunda/UserAccountManagement-BE.git
+link to repo : https://github.com/CarineIradukunda/UserAccountManagement-FE.git
